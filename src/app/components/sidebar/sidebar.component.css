@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  height: 100vh;
+  background-color: rgb(243 244 246); /* bg-gray-100 */
+}
+
+div {
+  min-height: 100%;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Ensure text doesn't wrap during transition */
+.whitespace-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+} 

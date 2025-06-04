@@ -1,0 +1,47 @@
+<div [ngClass]="isCollapsed ? 'w-12' : 'w-64'"
+     class="h-screen bg-gray-100 p-4 transition-all duration-300 ease-in-out flex flex-col border-r border-gray-200">
+  <!-- Top Section -->
+  <div>
+    <button (click)="toggleSidebar()" 
+            class="mb-6 text-gray-600 hover:text-gray-800 transition-colors duration-200" 
+            aria-label="Toggle Sidebar"
+            matTooltip="Toggle Sidebar">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <nav class="flex flex-col gap-4">
+      <a routerLink="/home" 
+         routerLinkActive="text-blue-600"
+         class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+         matTooltip="Home"
+         [matTooltipDisabled]="!isCollapsed">
+        <mat-icon>home</mat-icon>
+        <span *ngIf="!isCollapsed" class="whitespace-nowrap">Home</span>
+      </a>
+      <a routerLink="/login" 
+         routerLinkActive="text-blue-600"
+         class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
+         matTooltip="Login"
+         [matTooltipDisabled]="!isCollapsed">
+        <mat-icon>login</mat-icon>
+        <span *ngIf="!isCollapsed" class="whitespace-nowrap">Login</span>
+      </a>
+      <a routerLink="/profile" 
+         routerLinkActive="text-blue-600"
+         class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
+         matTooltip="My Profile"
+         [matTooltipDisabled]="!isCollapsed">
+        <mat-icon>person</mat-icon>
+        <span *ngIf="!isCollapsed" class="whitespace-nowrap">My Profile</span>
+      </a>
+      <a routerLink="/analytics" 
+         routerLinkActive="text-blue-600"
+         class="flex items-center gap-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
+         matTooltip="Analytics"
+         [matTooltipDisabled]="!isCollapsed">
+        <mat-icon>bar_chart</mat-icon>
+        <span *ngIf="!isCollapsed" class="whitespace-nowrap">Analytics</span>
+      </a>
+    </nav>
+  </div>
+</div> 
